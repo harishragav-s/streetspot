@@ -24,8 +24,6 @@ STREETSPOT is a smart street parking management system designed to identify empt
 ## System Architecture
 ![System Architecture](diagrams/diagram_3.png)
 
-## Activity Diagram
-![Activity Diagram](diagrams/diagram_0.png)
 
 ## Data Flow Diagram Level 0
 ![DFD Level 0](diagrams/diagram_1.png)
@@ -33,17 +31,11 @@ STREETSPOT is a smart street parking management system designed to identify empt
 ## Data Flow Diagram Level 1
 ![DFD Level 1](diagrams/diagram_2.png)
 
-## Use Case Diagram
-![Use Case](diagrams/diagram_4.png)
+## Output Screenshots :
+<img width="1920" height="1080" alt="Screenshot (359)" src="https://github.com/user-attachments/assets/67defb41-ecf0-43f2-96b1-834917516493" />
 
-## Output
-### Output 1 - Parking Slot Full
-(Add your screenshot here.)
+<img width="1920" height="1080" alt="Screenshot (362)" src="https://github.com/user-attachments/assets/0813d6a5-73b1-40c0-b99b-220869bd07c3" />
 
-### Output 2 - Parking Slot Empty
-(Add your screenshot here.)
-
-Detection Accuracy: approx. 96 percent
 
 ## Results and Impact
 The STREETSPOT system automates identification of street parking slot occupancy, reducing manual intervention and improving traffic flow and parking management efficiency.
