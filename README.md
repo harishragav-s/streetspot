@@ -22,14 +22,8 @@ STREETSPOT is a smart street parking management system designed to identify empt
 - Additional Libraries: numpy, scikit-learn, matplotlib.
 
 ## System Architecture
-![System Architecture](diagrams/diagram_3.png)
+<img width="682" height="558" alt="image" src="https://github.com/user-attachments/assets/714a3e3f-1dfe-4979-9076-bebd77e54844" />
 
-
-## Data Flow Diagram Level 0
-![DFD Level 0](diagrams/diagram_1.png)
-
-## Data Flow Diagram Level 1
-![DFD Level 1](diagrams/diagram_2.png)
 
 ## Output Screenshots :
 <img width="1920" height="1080" alt="Screenshot (359)" src="https://github.com/user-attachments/assets/67defb41-ecf0-43f2-96b1-834917516493" />
