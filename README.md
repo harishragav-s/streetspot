@@ -1,43 +1,68 @@
 # STREETSPOT  
-Automated Street Parking Slot Detection System using Convolutional Neural Networks.
+## Smart Street Parking Management System using Machine Learning and Computer Vision
 
-## About
-STREETSPOT is a smart street parking management system designed to identify empty and occupied parking slots using deep learning and computer vision. Traditional parking monitoring relies on manual operators and visual confirmation, which is slow, inaccurate and inefficient. This project overcomes these challenges by using CNN based image processing to automate slot detection through camera feeds. The system processes input images or video frames and produces real time parking occupancy status.
+## Overview
+STREETSPOT is a smart street parking management system that automatically detects empty and occupied parking slots from images and video feeds. The system combines computer vision techniques with machine learning models to provide real time parking availability information, reducing manual monitoring and improving urban traffic management.
 
-## Features
-- Implements convolutional neural network architecture for slot detection.  
-- Automated workflow: dataset input, preprocessing, model build and output classification.  
-- High scalability for large street parking zones.  
-- Low time complexity due to optimized processing pipeline.  
-- Supports structured parking output mapping in standard data format.  
-- Easily integratable with digital parking boards or mobile apps.
+The project is designed as a practical prototype for smart city applications where efficient parking utilization is critical.
 
-## Requirements
-- Operating System: Windows 10 or Windows 11 64 bit.  
-- Programming Language: Python 3.8 or later.  
-- Deep Learning Libraries: TensorFlow or PyTorch.  
-- Image Processing: OpenCV for frame processing.  
-- IDE: VS Code recommended.  
-- Version Control: Git.  
-- Additional Libraries: numpy, scikit-learn, matplotlib.
+---
+
+## Key Features
+- Automatic detection of parking slot occupancy  
+- Real time video processing using OpenCV  
+- Green bounding boxes for empty slots and red for occupied slots  
+- Machine learning based parking slot classification  
+- Mask based parking slot localization  
+- User authentication using SQLite and Flask  
+
+---
+
+## Tech Stack
+- **Programming Language:** Python  
+- **Computer Vision:** OpenCV  
+- **Machine Learning:** Scikit learn, TensorFlow, Keras  
+- **Web Framework:** Flask  
+- **Database:** SQLite  
+- **Version Control:** Git, GitHub  
+
+---
+
+## Dataset Details
+- **Total images:** 843  
+- **Training images:** 743  
+- **Validation images:** 100  
+- **Classes:** Empty, Not Empty  
+- **Train to validation split:** ~7:1  
+
+The dataset consists of labeled parking slot images used to train and evaluate the classification models.
+
+## Model Performance
+- **CNN training accuracy:** **98.80%**  
+- **CNN validation accuracy:** ~65–70%  
+- The difference between training and validation accuracy is due to limited dataset size and model complexity.  
+- The deployed application uses a lightweight classical machine learning model for faster real time inference.
+
+
+## Parking Slot Detection Workflow
+1. A binary mask image is used to identify parking slot regions  
+2. OpenCV connected component analysis extracts slot bounding boxes  
+3. Each slot region is cropped from the video frame  
+4. The ML model classifies the slot as empty or occupied  
+5. Green or red bounding boxes are drawn on the video frame  
+6. The total number of available slots is displayed in real time  
+
+---
 
 ## System Architecture
-<img width="682" height="558" alt="image" src="https://github.com/user-attachments/assets/714a3e3f-1dfe-4979-9076-bebd77e54844" />
+<img width="682" height="558" alt="System Architecture" src="https://github.com/user-attachments/assets/714a3e3f-1dfe-4979-9076-bebd77e54844" />
 
+---
 
-## Output Screenshots :
-<img width="1920" height="1080" alt="Screenshot (359)" src="https://github.com/user-attachments/assets/67defb41-ecf0-43f2-96b1-834917516493" />
+## Output Screenshots
+<img width="1920" height="1080" alt="Output Screenshot 1" src="https://github.com/user-attachments/assets/67defb41-ecf0-43f2-96b1-834917516493" />
 
-<img width="1920" height="1080" alt="Screenshot (362)" src="https://github.com/user-attachments/assets/0813d6a5-73b1-40c0-b99b-220869bd07c3" />
+<img width="1920" height="1080" alt="Output Screenshot 2" src="https://github.com/user-attachments/assets/0813d6a5-73b1-40c0-b99b-220869bd07c3" />
 
-
-## Results and Impact
-The STREETSPOT system automates identification of street parking slot occupancy, reducing manual intervention and improving traffic flow and parking management efficiency.
-
-## Articles published / References
-1. J. K. Suhr and H. G. Jung, Survey of target parking position designation for automatic parking systems, 2023.  
-2. Y. Park et al., Deep learning based parking slot detection, 2021.  
-3. Alexey Bochkovskiy et al., YOLOv4, 2021.  
-4. Q. H. Bui and J. K. Suhr, Parking Slot Detection using Transformer, 2023.  
-5. C. Min et al., Attentional Graph Neural Network for Parking-slot Detection, 2021.
+---
 
