@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 
 
-database ="final3.db"
+database ="streetspot.db"
 conn = sqlite3.connect(database)
 cursor = conn.cursor()
 

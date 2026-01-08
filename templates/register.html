@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration and Login</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            background-image: url('static/parking.jpg'); /* Add your background image path */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #000000; /* Font color */
+        }
+
+        #loginForm, #registrationForm {
+            display: none;
+            width: 300px;
+            height: 400px;
+            background-color: rgba(255, 255, 255, 0.8); /* Form container background color with transparency */
+            padding: 20px;
+            border: 1px solid palevioletred;
+            border-radius: 10px;
+            margin: 50px auto;
+            background-color: transparent;
+            backdrop-filter: blur(10px);
+        }
+        h2{
+            
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        #topButtons {
+            
+            position: fixed;
+            top:10px;
+            right: 50px;
+              
+        }
+        
+        label{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17px;
+            font-weight: bold;
+        }
+        button{
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(243, 243, 89);
+            color: black;
+        }
+        button:first-child {
+        margin-right: 20px; /* Adjust the margin as needed */
+    }
+    button:hover{
+            background-color: rgb(249, 74, 74);
+        }
+
+        #registrationForm {
+            display: block; /* Show registration form by default */
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: 1px solid palevioletred;
+            border-radius: 5px;
+            background-color:white;
+        }
+        input[type="submit"]{
+            margin-top: 10px;
+            margin-left: 90px;
+            width: 120px;
+            padding: 7px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(243, 243, 89);
+            color: black;
+
+
+        }
+        input[type="submit"]:hover{
+            background-color:  rgb(249, 74, 74);
+        }
+
+       
+    </style>
+</head>
+<body>
+
+    <div id="topButtons">
+        <button onclick="showRegistrationForm()">Register</button>
+        <button onclick="showLoginForm()">Login</button>
+
+    </div>
+   
+        
+
+    <div id="registrationForm">
+        <h2>User Registration</h2>
+        <form action="/u_register" method="post">
+            <label for="name">Name:</label>
+            <input type="text" name="name" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" required><br>
+
+            <label for="password">Password:</label>
+            <input type="password" name="password" required><br>
+
+            <input type="submit" value="Register">
+        </form>
+    </div>
+
+    <div id="loginForm">
+        <h2>User Login</h2>
+        <form action="/u_login" method="post">
+            <label for="email">Email:</label>
+            <input type="email" name="email" required><br>
+
+            <label for="password">Password:</label>
+            <input type="password" name="password" required><br>
+
+            <input type="submit" value="Login">
+        </form>
+    </div>
+
+
+    <script>
+        function showLoginForm() {
+            document.getElementById("registrationForm").style.display = "none";
+            document.getElementById("loginForm").style.display = "block";
+        }
+
+        function showRegistrationForm() {
+            document.getElementById("registrationForm").style.display = "block";
+            document.getElementById("loginForm").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Spot Detection</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url("static/parking1.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .btn{
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        padding: 10px;
+
+    }
+    button{
+        width: 70px;
+        padding: 5px;
+        border: none;
+        border-radius: 5px;
+        background-color:  rgb(243, 243, 89);
+        
+    }
+    button:hover{
+        background-color:  rgb(249, 74, 74);
+    }
+    h1{
+        margin-top: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .container{
+        display: block;
+        padding: 20px;
+        border: 1px solid black;
+        border-radius: 5px;
+        backdrop-filter: blur(10px);
+    }
+    form{
+        text-align: center;
+    }
+    label{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+        display: block;
+        margin-bottom: 10px;
+    }
+    input[type='file']{
+        margin-bottom: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+    }
+    input[type='submit']{
+        margin-top: 10px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: rgb(243, 243, 89);
+    }
+
+     input[type='submit']:hover{
+        background-color: rgb(249, 74, 74);
+     }
+
+</style>
+<body>
+    <div class="btn">
+    <a href="/"><button >back</button></a>
+</div>
+    <div class="container">
+    <h1>Select Input Mask and Video</h1>
+
+    <form action="/process" method="post"  enctype="multipart/form-data">
+        <label for="mask">Select Mask Image:</label>
+        <input type="file" name="mask" accept=".png"><br>
+
+        <label for="video">Select Video File:</label>
+        <input type="file" name="video" accept=".mp4"><br>
+
+        <input type="submit" value="Process">
+    </form>
+</div>
+</body>
+</html>
