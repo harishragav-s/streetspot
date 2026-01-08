@@ -37,13 +37,14 @@ The project is designed as a practical prototype for smart city applications whe
 
 The dataset consists of labeled parking slot images used to train and evaluate the classification models.
 
+---
 ## Model Performance
 - **CNN training accuracy:** **98.80%**  
 - **CNN validation accuracy:** ~65–70%  
 - The difference between training and validation accuracy is due to limited dataset size and model complexity.  
 - The deployed application uses a lightweight classical machine learning model for faster real time inference.
 
-
+---
 ## Parking Slot Detection Workflow
 1. A binary mask image is used to identify parking slot regions  
 2. OpenCV connected component analysis extracts slot bounding boxes  
